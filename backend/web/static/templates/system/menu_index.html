@@ -1,0 +1,49 @@
+<thead>
+<tr role="row">
+    <th>
+        <label class="mt-checkbox mt-checkbox-outline" style="padding-left:19px;"><input type="checkbox" class="select-on-check-all" id="checkAll"><span></span></label>全选
+    </th>
+
+    <th>排序</th>
+    <th>pid</th>
+    <th>名称</th>
+    <th>分组</th>
+    <th>URL</th>
+    <th>是否隐藏</th>
+    <th>状态</th>
+    <th>操作</th>
+</tr>
+</thead>
+<tbody>
+{{#each list}}
+<tr id="{{id}}">
+    <td>
+        <label class="mt-checkbox mt-checkbox-outline" style="padding-left:19px;"><input type="checkbox" class="select"><span></span></label></td>
+
+    <td>{{sort}}</td>
+    <td>{{pid}}</td>
+    <td style="text-align: left;">{{title}}</td>
+    <td>{{group}}</td>
+    <td>{{url}}</td>
+    <td><span class="label label-sm label-success">{{hide}}</span></td>
+    <td><span class="label label-sm label-success">{{status}}</span></td>
+    <td>
+
+        <div class="btn-group">
+            <button class="btn red dropdown-toggle" data-toggle="dropdown">操作
+                <i class="fa fa-angle-down"></i>
+            </button>
+            <ul class="dropdown-menu">
+                <li>
+                    <a href="javascript:;" actionrule="del" actionid="{{id}}" class="btn btn-sm green"> <i class="glyphicon glyphicon-trash"></i>&nbsp;<span>删除</span> </a>
+                </li>
+                <li>
+                    <a href="javascript:;" actionrule="edit" actionid="{{id}}" class="btn btn-sm red"> <i class="glyphicon glyphicon-pencil"></i>&nbsp;<span>修改</span> </a>
+                </li>
+            </ul>
+        </div>
+    </td>
+
+</tr>
+{{/each}}
+</tbody>

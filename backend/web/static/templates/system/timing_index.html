@@ -1,0 +1,59 @@
+<thead>
+<tr role="row">
+    <th>
+        <label class="mt-checkbox mt-checkbox-outline" style="padding-left:19px;"><input type="checkbox" class="select-on-check-all" id="checkAll"><span></span></label>全选
+    </th>
+
+    <th>邮件标题</th>
+    <th>Excel标题</th>
+    <th>发送周期</th>
+    <th>状态</th>
+    <th>操作</th>
+</tr>
+</thead>
+<tbody>
+{{#each list}}
+<tr id="{{id}}">
+    <td>
+        <label class="mt-checkbox mt-checkbox-outline" style="padding-left:19px;"><input type="checkbox" class="select"><span></span></label></td>
+
+    <td style="text-align: left;">{{title}}</td>
+    <td style="text-align: left;">{{subject}}</td>
+    <td>{{crontab}}</td>
+    <td><span {{#ifCond status "==" '正常' }}class="label label-sm label-success"{{else}}class="label label-sm label-danger"{{/ifCond}}>{{status}}</span></td>
+    <td>
+
+        <div class="btn-group">
+            <button class="btn red dropdown-toggle" data-toggle="dropdown">操作
+                <i class="fa fa-angle-down"></i>
+            </button>
+            <ul class="dropdown-menu">
+                <li>
+                    <a href="javascript:;" actionrule="del" actionid="{{id}}" class="btn btn-sm green"> <i class="glyphicon glyphicon-trash"></i>&nbsp;<span>删除</span> </a>
+                </li>
+                <li>
+                    <a href="javascript:;" actionrule="edit" actionid="{{id}}" class="btn btn-sm red"> <i class="glyphicon glyphicon-pencil"></i>&nbsp;<span>修改</span> </a>
+                </li>
+
+            </ul>
+
+        </div>
+        {{#ifCond status "==" '正常' }}
+        <div class="btn-group">
+            <a href="javascript:;" actionrule="open" actionid="{{id}}" status="0" class="btn btn-sm red"> &nbsp;<span>禁用</span> </a>
+        </div>
+        {{else}}
+        <div class="btn-group">
+            <a href="javascript:;" actionrule="open" actionid="{{id}}" status="1" class="btn btn-sm green"> &nbsp;<span>开启</span> </a>
+        </div>
+        {{/ifCond}}
+
+        <div class="btn-group">
+            <a href="javascript:;" actionrule="run" actionid="{{id}}" runnow="1" class="btn btn-sm green"> &nbsp;<span>立即执行</span> </a>
+        </div>
+
+    </td>
+
+</tr>
+{{/each}}
+</tbody>

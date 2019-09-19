@@ -1,0 +1,46 @@
+<thead>
+<tr role="row">
+    <th>
+        <label class="mt-checkbox mt-checkbox-outline" style="padding-left:19px;"><input type="checkbox" class="select-on-check-all" id="checkAll"><span></span></label>全选
+    </th>
+
+    <th>角色名</th>
+    <th>描述</th>
+    <th>创建时间</th>
+    <th>更新时间</th>
+    <th>操作</th>
+</tr>
+</thead>
+<tbody>
+{{#each list}}
+<tr id="{{name}}">
+    <td>
+        <label class="mt-checkbox mt-checkbox-outline" style="padding-left:19px;"><input type="checkbox" class="select"><span></span></label></td>
+
+    <td>{{name}}</td>
+    <td>{{description}}</td>
+    <td>{{createdAt}}</td>
+    <td>{{updatedAt}}</td>
+    <td>
+
+        <div class="btn-group">
+            <button class="btn red dropdown-toggle" data-toggle="dropdown">操作
+                <i class="fa fa-angle-down"></i>
+            </button>
+            <ul class="dropdown-menu">
+                <li>
+                    <a href="javascript:;" actionrule="del" actionid="{{name}}" class="btn btn-sm green"> <i class="glyphicon glyphicon-trash"></i>&nbsp;<span>删除</span> </a>
+                </li>
+                <li>
+                    <a href="javascript:;" actionrule="edit" actionid="{{name}}" class="btn btn-sm red"> <i class="glyphicon glyphicon-pencil"></i>&nbsp;<span>修改</span> </a>
+                </li>
+                <li>
+                    <a href="javascript:;" actionrule="auth" actionid="{{name}}" class="btn btn-sm dark"> <i class="glyphicon glyphicon-user"></i>&nbsp;<span>权限详情</span> </a>
+                </li>
+            </ul>
+        </div>
+    </td>
+
+</tr>
+{{/each}}
+</tbody>

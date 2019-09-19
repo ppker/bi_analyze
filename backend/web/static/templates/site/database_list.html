@@ -1,0 +1,41 @@
+<thead>
+<tr role="row">
+    <th>数据源名称</th>
+    <th>host:port</th>
+    <th>user</th>
+    <th>password</th>
+    <th>状态</th>
+    <th>创建时间</th>
+    <th>操作</th>
+</tr>
+</thead>
+<tbody>
+{{#each list}}
+<tr id="{{id}}">
+    <td>{{name}}</td>
+    <td>{{value.host}}:{{value.port}}</td>
+    <td>{{value.user}}</td>
+    <td>{{value.password}}</td>
+    <td><span class="label label-sm label-success">{{status}}</span></td>
+    <td>{{create_at}}</td>
+    <td>
+
+        <div class="btn-group">
+            <button class="btn red dropdown-toggle" data-toggle="dropdown">操作
+                <i class="fa fa-angle-down"></i>
+            </button>
+            <ul class="dropdown-menu" style="min-width: 80px;">
+                <li>
+                    <a href="javascript:;" actionrule="del" actionid="{{id}}" class="btn btn-sm green"> <i class="glyphicon glyphicon-trash"></i>&nbsp;<span>删除</span> </a>
+                </li>
+                <li>
+                    <a href="javascript:;" actionrule="edit" actionid="{{id}}" class="btn btn-sm red"> <i class="glyphicon glyphicon-pencil"></i>&nbsp;<span>修改</span> </a>
+                </li>
+                <li class="divider"> </li>
+            </ul>
+        </div>
+    </td>
+
+</tr>
+{{/each}}
+</tbody>

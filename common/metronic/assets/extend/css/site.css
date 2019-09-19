@@ -1,0 +1,131 @@
+.table th{ white-space: nowrap;vertical-align: middle;}
+.table th, .table td{
+    text-align: center;
+    vertical-align: middle;
+}
+.form-horizontal label.radio-inline{
+    padding-top: 0;
+}
+.table tbody tr td{
+    vertical-align: middle;
+}
+ul.page-breadcrumb a:hover, ul.page-breadcrumb a:link, ul.page-breadcrumb a:visited{
+    text-decoration: none;
+}
+
+.page-header.navbar .page-logo .logo-default {
+    height: 52px;
+    margin-top: 3px;
+}
+
+.scroll-to-top > i {
+    opacity: 1;
+    color: #89939e;
+    font-size: 42px;
+    font-weight: 300;
+}
+
+div .page-footer-inner {
+    text-align: center;
+}
+
+.page-footer .page-footer-inner {
+    float: none;
+    display: block;
+}
+
+.dashboard-stat.dashboard-stat-v2 .visual {
+    padding-top: 0;
+}
+.dashboard-stat .visual>i {
+    margin-left: -6px;
+}
+
+.dashboard-stat.dashboard-stat-v2 .details .tb {
+    text-align: right;
+    color: #bb3636;
+    font-weight: bold;
+    letter-spacing: 0;
+    size: 14px;
+    margin-top: 5px;
+}
+
+.table-container table tr.strip1{
+    background-color: #d9edf7;
+}
+
+.table-container table tr.strip2{
+    background-color: #ffffff;
+}
+
+span.money_wy {
+    font-size: 18px;
+}
+
+.page-sidebar .page-sidebar-menu .sub-menu>li.open>a {
+    background: #e7505a!important;
+}
+
+.table th, .table td {
+    white-space: nowrap;
+}
+/*
+#table th, #table td {
+    white-space: nowrap;
+}*/
+
+table.table-hover tbody tr[role='row']:hover {
+    background-color: #00A8FF !important;
+}
+
+#frontend_go {
+    position: fixed;
+    opacity: 0.7;
+    left: 0px;
+    top: 0px;
+    display: none;
+    z-index: 99999999;
+    width: 100%;
+    text-align: center;
+    height: 100%;
+    background: rgb(20, 29, 31);
+}
+
+div.frontend_go {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+
+}
+
+img.logo-default {
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+img.logo-default:hover {
+    -webkit-transform: scale(1.2) rotate(360deg);
+    -moz-transform: scale(1.2) rotate(360deg);
+    -o-transform: scale(1.2) rotate(360deg);
+    -ms-transform: scale(1.2) rotate(360deg);
+    transform: scale(1.2) rotate(360deg);
+}
+
+img#little_avatar {
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+img#little_avatar:hover {
+    -webkit-transform: scale(1.2) rotate(360deg);
+    -moz-transform: scale(1.2) rotate(360deg);
+    -o-transform: scale(1.2) rotate(360deg);
+    -ms-transform: scale(1.2) rotate(360deg);
+    transform: scale(1.2) rotate(360deg);
+}

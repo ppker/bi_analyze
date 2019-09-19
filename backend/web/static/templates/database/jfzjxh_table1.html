@@ -1,0 +1,21 @@
+<thead>
+<tr role="row">
+
+    <th>日期</th>
+    <th>积分增加量(万)</th>
+    <th>积分消耗量(万)</th>
+    <th>消耗比</th>
+    <th>积分存量(万)</th>
+</tr>
+</thead>
+<tbody>
+{{#each list}}
+<tr>
+    <td>{{DAY_CODE}}</td>
+    <td>{{积分增加量}}</td>
+    <td>{{积分消耗量}}</td>
+    <td>{{消耗比}}</td>
+    <td>{{积分存量}}</td>
+</tr>
+{{/each}}
+</tbody>

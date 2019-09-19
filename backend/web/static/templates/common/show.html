@@ -1,0 +1,22 @@
+<thead>
+<tr role="row">
+    <!--<th>
+        <label class="mt-checkbox mt-checkbox-outline" style="padding-left:19px;"><input type="checkbox" class="select-on-check-all" id="checkAll"><span></span></label>全选
+    </th>-->
+    {{#each list.head}}
+    <th>{{this}}</th>
+    {{/each}}
+</tr>
+</thead>
+<tbody>
+{{#each list.limit}}
+<tr id="{{@index}}">
+    <!--<td>
+        <label class="mt-checkbox mt-checkbox-outline" style="padding-left:19px;"><input type="checkbox" class="select"><span></span></label>
+    </td>-->
+    {{#each this}}
+    <td>{{this}}</td>
+    {{/each}}
+</tr>
+{{/each}}
+</tbody>

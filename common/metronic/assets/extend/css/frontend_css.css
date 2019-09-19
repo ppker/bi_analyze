@@ -1,0 +1,206 @@
+.page-header .page-header-top .page-logo .logo-default {
+    margin-top: 7px;
+}
+.footer-block .label-block {
+    margin-top: 16px;
+}
+.footer-block .label-block span {
+    line-height: 30px;
+}
+
+div.footer-block p {
+    padding-top: 4px;
+}
+div.page-footer-end {
+    padding: 12px 0;
+}
+.tp-banner-container .fulllscreenvideo.tp-videolayer {
+    left: 0px !important;
+}
+
+span.star-ranking {
+    display: inline-block;
+    margin-top: 1px;
+    background-image: url(data:image/NGf;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAMCAYAAAC9QufkAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpBMjcyQ0JGRDg3NjAxMUU0QTcwM0ZBNTRDMzMxNkExNyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpBMjcyQ0JGRTg3NjAxMUU0QTcwM0ZBNTRDMzMxNkExNyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkEyNzJDQkZCODc2MDExRTRBNzAzRkE1NEMzMzE2QTE3IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkEyNzJDQkZDODc2MDExRTRBNzAzRkE1NEMzMzE2QTE3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+wn4r+wAAANdJREFUeNqMUdmqhDAMPSmu4Ipv+v+fpm/igqCimGnKvTIzt5UbKLRJz5KEmBnfsSyLSSZJQngIsoH7vjfJqqoeweo7oclYK4u6uf9b+bouHoYB4ziad1EUKMsSSimrA9IfeV1X7PuO8zytCp7nIQxDxHGMPM9vItIgbttWVPHYn1JomgZBENCHbSHous5JIMC6rkWdrD1v22Yc2EIUoygi57S1HadlV+0GH8fhBLtqN/h30kSENE3Nkft7zbnneZ5ZFPQqZDX0A+JpmuD7PrIs+9PzS4ABAF1/c+uyTTYfAAAAAElFTkSuQmCC);
+    display: inline-block;
+    width: 72px;
+    height: 12px;
+    line-height: 12px;
+    overflow: hidden;
+    background-repeat: repeat-x;
+}
+
+.mt-element-overlay .mt-overlay-1 .mt-overlay {
+    background-color: rgba(0,0,0,.2);
+}
+
+span.star-score {
+    display: inline-block;
+    width: 72px;
+    height: 12px;
+    line-height: 12px;
+    overflow: hidden;
+    background-image: url(data:image/NGf;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAMCAYAAAC9QufkAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpEMzRBQ0IwMzg0RUMxMUU0OTE5MjhGN0M2Mjc2RUE4NCIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpEMzRBQ0IwNDg0RUMxMUU0OTE5MjhGN0M2Mjc2RUE4NCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkQzNEFDQjAxODRFQzExRTQ5MTkyOEY3QzYyNzZFQTg0IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkQzNEFDQjAyODRFQzExRTQ5MTkyOEY3QzYyNzZFQTg0Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+AtcGTAAAAKtJREFUeNpi/D+fARtwgtL7MGQS/sOZLFg0MgJxG5RtCcT/GXAAJixivkBsDsV+DHgAumZ5IG5F4rdAxXBqzgPi7UD8GogfALEOkrwOVOw1VE0euuaTQGwHxCJ4XCgCVXMSm+ZIIP6LR/NfqJqT2Py8CYjL8Ggug6rBGWA38Wi+QSi05fBolidW8xMgzoHiJ/gMRk5hoJSUCcTzgPgXVGw2ECcBsSw2zQABBgCh5SAInEmqoQAAAABJRU5ErkJggg==);
+    background-repeat: repeat-x;
+}
+
+div .hotel-star {
+    text-align: left;
+    margin-left: 15px;
+}
+span.cc-lightred-new {
+    margin-left: 15px;
+}
+div .mt-card-social {
+    margin-top: 2px;
+}
+
+.mt-element-card .mt-card-item .mt-card-content .mt-card-social>ul {
+    margin-bottom: 4px;
+}
+
+.page-content {
+    padding: 0 0 !important;
+    margin-left: 0 !important;
+}
+
+div.img-avatar, img.img-avatar {
+    height: 136px;
+    width: 136px;
+}
+
+div.img-info {
+    margin-left: 22px;
+}
+
+div.hotel-star-detail {
+    margin-left: 0;
+    line-height: 1;
+}
+
+div.one-line-info div {
+    margin-bottom: 2px;
+}
+
+div img.dish-img {
+    width: 100%;
+    height: 160px;
+}
+
+div.mt-card-social ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 3px;
+}
+
+div.mt-card-item {
+    margin-bottom: 8px;
+}
+
+div.shopping-cart {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    margin-left: 14%;
+    width: 300px;
+    z-index: 100;
+    font-size: 14px;
+}
+
+table.table-shopping-car a.jian{
+    width: 16px;
+    height: 16px;
+    border: 1px solid #1d1f1d;
+    display: inline-block;
+    letter-spacing: 0;
+    color: #1d1f1d;
+    font-weight: bold;
+    text-align: center;
+}
+
+table.table-shopping-car input.zhong{
+    width: 14px;
+    display: inline-block;
+    height: 16px;
+    _height: 17px;
+    padding: 0 3px;
+    line-height: 16px;
+    border-left: 0;
+    border-right: 0;
+    border-color: #1d1f1d;
+    text-align: center;
+}
+table.table-shopping-car a.jia{
+    width: 16px;
+    height: 16px;
+    border: 1px solid #1d1f1d;
+    display: inline-block;
+    letter-spacing: 0;
+    color: #1d1f1d;
+    font-weight: bold;
+    text-align: center;
+}
+
+button#qxd {
+    position: absolute;
+    margin-top: -10px;
+}
+
+table td.item-count {
+    text-align: center;
+    vertical-align: middle;
+}
+
+table td.item-count span.item-minus {
+    background-image: url("../../../../static/images/add-add.png");
+    background-position: -7px -26px;
+    background-repeat: no-repeat;
+    height: 18px;
+    width: 18px;
+    float: left;
+}
+
+table td.item-count input.item-count {
+    width: 26px;
+    height: 20px;
+    float: left;
+    text-align: center;
+}
+
+table td.item-count span.item-plus {
+    background-image: url("../../../../static/images/add-add.png");
+    background-position: -7px -54px;
+    background-repeat: no-repeat;
+    height: 18px;
+    width: 18px;
+    float: left;
+}
+.table-head th {
+    text-align: center;
+}
+
+span.item-minus, input.item-count, span.item-plus {
+    position: relative;
+    left: 12px;
+}
+
+button#clear {
+    position: absolute;
+    right: 26px;
+    bottom: 5px;
+}
+
+div#loginModal div.checkbox label {
+    padding-left: 24px;
+}
+
+.scroll-to-top > i {
+    opacity: 1;
+    color: #89939e;
+    font-size: 42px;
+    font-weight: 300;
+}
+
+.mt-card-item div.mt-card-avatar a img {
+    height: 171px;
+}
