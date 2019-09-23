@@ -10,6 +10,15 @@
 
 use yii\widgets\ActiveForm;
 use yii\helpers\Url;
+use backend\assets\AppAsset;
+use yii\web\AssetManager;
+
+// AppAsset::addScript($this, "@web/");
+// AppAsset::addCss($this, $css_file);
+$published_web_url = (new AssetManager())->getPublishedUrl("@common/metronic/assets");
+// 按需加载前端资源
+AppAsset::addScript($this, $published_web_url . "/global/plugins/bootstrap-fileinput/bootstrap-fileinput.js");
+AppAsset::addCss($this, $published_web_url . "/global/plugins/bootstrap-fileinput/bootstrap-fileinput.css");
 
 $this->title = '数据导入管理';
 $this->params['title_sub'] = '导入自己的数据';
@@ -116,12 +125,34 @@ $this->params['title_sub'] = '导入自己的数据';
                     <div class="col-lg-2 col-md-4 col-xs-12">
                         <div class="mt-element-ribbon bg-grey-steel">
                             <div class="ribbon ribbon-color-primary uppercase">Excel</div>
-                            <p class="ribbon-content">Excel文件数据</p>
-                            <div style="text-align:center;">
-                                <a href="javascript:;" class="btn btn-sm red btn-db-import" data-type="file-excel"> 导入
-                                    <i class="fa fa-user"></i>
-                                </a>
-                            </div>
+                            <p class="ribbon-content">
+                                <div style="text-align:center;">
+
+                                    <form id="form_excel" role="form" data-toggle="validator" method="post" enctype="multipart/form-data">
+
+                                        <div class="form-group">
+
+                                            <div class="fileinput fileinput-new" data-provides="fileinput">
+                                                                    <span class="btn btn-sm green btn-file">
+                                                                        <span class="fileinput-new"> Select file </span>
+                                                                        <span class="fileinput-exists"> Change </span>
+                                                                        <input type="hidden" name="<?= Yii::$app->getRequest()->csrfParam; ?>" value="<?= Yii::$app->getRequest()->getCsrfToken(); ?>">
+                                                                        <input type="file" name="excel_file" multiple> </span>
+                                                <span class="fileinput-filename"> </span> &nbsp;
+                                                <a href="javascript:;" class="close fileinput-exists" data-dismiss="fileinput"> </a>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="margin-top-10">
+                                            <button type="reset" class="btn default">取消</button>
+                                            <button type="submit" class="btn green">提交</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </p>
+
+
 
                         </div>
                     </div>
@@ -129,12 +160,31 @@ $this->params['title_sub'] = '导入自己的数据';
                     <div class="col-lg-2 col-md-4 col-xs-12">
                         <div class="mt-element-ribbon bg-grey-steel">
                             <div class="ribbon ribbon-color-primary uppercase">CSV</div>
-                            <p class="ribbon-content">CSV文件数据</p>
-                            <div style="text-align:center;">
-                                <a href="javascript:;" class="btn btn-sm red btn-db-import" data-type="file-csv"> 导入
-                                    <i class="fa fa-user"></i>
-                                </a>
-                            </div>
+                            <p class="ribbon-content">
+                                <div style="text-align:center;">
+                                    <form id="form_csv" role="form" data-toggle="validator" method="post" enctype="multipart/form-data">
+
+                                        <div class="form-group">
+
+                                            <div class="fileinput fileinput-new" data-provides="fileinput">
+                                                                            <span class="btn btn-sm green btn-file">
+                                                                                <span class="fileinput-new"> Select file </span>
+                                                                                <span class="fileinput-exists"> Change </span>
+                                                                                <input type="hidden" name="<?= Yii::$app->getRequest()->csrfParam; ?>" value="<?= Yii::$app->getRequest()->getCsrfToken(); ?>">
+                                                                                <input type="file" name="csv_file" multiple> </span>
+                                                <span class="fileinput-filename"> </span> &nbsp;
+                                                <a href="javascript:;" class="close fileinput-exists" data-dismiss="fileinput"> </a>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="margin-top-10">
+                                            <button type="reset" class="btn default">取消</button>
+                                            <button type="submit" class="btn green">提交</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </p>
 
                         </div>
                     </div>

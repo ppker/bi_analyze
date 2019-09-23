@@ -120,6 +120,12 @@
         return ajax(options);
     };
 
+    // user_database_upload
+    self.user_database_upload = function(options) {
+        options = options ? options : {};
+        options.url = "/api/web/user/database_upload";
+        return ajax(options);
+    };
 
 
 

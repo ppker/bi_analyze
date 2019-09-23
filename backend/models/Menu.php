@@ -56,8 +56,8 @@ class Menu extends \common\models\Menu {
         $menus['child'] = []; // 左栏的菜单
 
         $nav = static::getBreadcrumbs($rule);
-
         // 获取当前active主菜单对应的左菜单
+
         foreach($menus['main'] as $key => $item) {
             if (!is_array($item) || empty($item['title']) || empty($item['url'])) {
                 // throw error

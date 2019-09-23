@@ -11,6 +11,7 @@ namespace api\controllers;
 
 use common\models\User;
 use common\models\SettingDatabase;
+use yii\web\UploadedFile;
 
 
 use yii\db\Query;
@@ -18,6 +19,7 @@ use yii\helpers\ArrayHelper;
 use Yii;
 use common\models\LoginForm;
 use yii\helpers\Url;
+use api\service\FileService;
 
 class UserController extends BaseController {
 
@@ -138,5 +140,24 @@ class UserController extends BaseController {
         ];
 
     }
+
+    // database_upload
+    public function actionDatabase_upload() {
+
+        $result = "";
+        $excel_file = UploadedFile::getInstanceByName('excel_file');
+        if ($excel_file && property_exists($excel_file, 'tempName')) {
+            // 读取excel内的数据 注入到数据库当中
+            $file_server = new FileService();
+            $result = $file_server->readExcel($excel_file->tempName);
+        }
+
+        if ($result) {
+            return ['success' => 1, 'message' => '导入数据成功！', 'data' => []];
+        } else return ['success' => 0, 'message' => '导入数据失败!', 'data' => []];
+
+    }
+
+
 
 }
