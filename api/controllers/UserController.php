@@ -158,6 +158,12 @@ class UserController extends BaseController {
 
     }
 
+    // database_profile
+    public function actionDatabase_profile() {
+
+        $dbid = $this->request->get("dbid", 0);
+        var_dump($dbid);die;
+    }
 
 
 }

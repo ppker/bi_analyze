@@ -14,6 +14,7 @@ window.PAGE_ACTION = function() {
         btn_del = null,
         btn_edit = null,
         btn_submit = null,
+        show_tables = null,
 
         main_end = null;
 
@@ -47,6 +48,7 @@ window.PAGE_ACTION = function() {
                         btn_del();
                         btn_edit();
                         btn_submit();
+                        show_tables();
                     });
 
 
@@ -69,7 +71,16 @@ window.PAGE_ACTION = function() {
                 });
             }
         });
-    }
+    };
+
+    show_tables = function() {
+        $("table tr .btn-group").on("click", "button[actionrule='look_to']", function(e) {
+            var $id = $(this).data("dbid");
+            ZP.utils.dumpUrl('/admin/site/database_profile?dbid=' + $id);
+            e.preventDefault();
+        })
+    };
+
 
     btn_edit = function() { // 编辑操作
         $("table tr .btn-group li").on("click", "a[actionrule='edit']", function() {

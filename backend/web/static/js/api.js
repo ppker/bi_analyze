@@ -127,6 +127,12 @@
         return ajax(options);
     };
 
+    // database_profile
+    self.database_profile = function(options) {
+        options = options ? options : {};
+        options.url = "/api/web/user/database_profile";
+        return ajax(options);
+    };
 
 
 

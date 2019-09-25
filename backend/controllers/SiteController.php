@@ -62,6 +62,11 @@ class SiteController extends BaseController {
         return $this->render('database_list');
     }
 
+    public function actionDatabase_profile() {
+
+        return $this->render('database_profile');
+    }
+
     public function actionLogin() {
 
     	if (!Yii::$app->user->isGuest) {
