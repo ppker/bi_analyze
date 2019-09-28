@@ -9,6 +9,7 @@
 namespace api\service;
 
 use yii\db\Migration;
+use yii\db\Query;
 
 class SqlMigrationService extends  Migration {
 
@@ -26,7 +27,7 @@ class SqlMigrationService extends  Migration {
      * @param $user_id
      * @return bool
      */
-    public function createFileTable($field_data, $user_id) {
+    public function createFileTable($field_data, $user_id, $file_name = '') {
 
         if (empty($field_data) || !is_array($field_data)) return false;
         // 创建数据表
@@ -47,8 +48,28 @@ class SqlMigrationService extends  Migration {
 
         $this->createTable('{{%' . $table_name . '}}', $table_field_struct, $tableOptions);
 
+        // 创建表的时候要关联到 数据源列表
+        $res = $this->_insert_database_source($table_name, 'file', $file_name);
+
         return ['table_name' => $table_name];
     }
+
+    protected function _insert_database_source($table_name, $file_type, $file_name) {
+
+        $res = \Yii::$app->db->createCommand()->insert('setting_database', [
+            'user_id' => 0,
+            'type' => $file_type,
+            'name' => $file_name,
+            'value' => json_encode(['dbname' => 'bi_analyze_import', 'table' => $table_name]),
+            'status' => 1,
+        ])->execute();
+        return $res;
+    }
+
+
+
+
+
 
     /**
      * @desc 批量表插入文件数据

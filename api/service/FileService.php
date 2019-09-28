@@ -20,7 +20,7 @@ class FileService extends  Component {
         $this->_SqlMigrationService = new SqlMigrationService();
     }
 
-    public function  readExcel($file = '') {
+    public function  readExcel($file = '', $file_name = '') {
 
         if ('' == $file) return false;
 
@@ -47,8 +47,8 @@ class FileService extends  Component {
                 }
             }
 
-            if (!empty($row_header) && 1 ==  $row_num) { // 创建数据库
-                $res_create_table = $this->_SqlMigrationService->createFileTable($row_header, 1001);
+            if (!empty($row_header) && 1 ==  $row_num) { // 创建数据表
+                $res_create_table = $this->_SqlMigrationService->createFileTable($row_header, 1001, $file_name);
                 if (!$res_create_table) return false;
                 $table_name = $res_create_table['table_name'] ?? "";
             }

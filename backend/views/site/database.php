@@ -45,7 +45,12 @@ $this->params['title_sub'] = '导入自己的数据';
 
                 <div class="row">
                     <div class="col-lg-2 col-md-4 col-xs-12">
-                        <div class="mt-element-ribbon bg-grey-steel">
+                        <div class="mt-element-ribbon bg-grey-steel" style="background-color: #3598dc !important;">
+                            <div class="visual" style="width: 80px;
+    height: 80px;display: block;font-size: 75px;position: absolute;top: 28px;right: 38px;opacity: 0.3;line-height: 75px;">
+                                <i class="fa fa-database" style="color: #fdfdfd;"></i>
+                            </div>
+
                             <div class="ribbon ribbon-color-primary uppercase">Mysql</div>
                             <p class="ribbon-content">Mysql数据库</p>
                             <div style="text-align:center;">
@@ -58,7 +63,11 @@ $this->params['title_sub'] = '导入自己的数据';
                     </div>
 
                     <div class="col-lg-2 col-md-4 col-xs-12">
-                        <div class="mt-element-ribbon bg-grey-steel">
+                        <div class="mt-element-ribbon bg-grey-steel" style="background-color: #3598dc !important;">
+                            <div class="visual" style="width: 80px;
+    height: 80px;display: block;font-size: 75px;position: absolute;top: 28px;right: 38px;opacity: 0.3;line-height: 75px;">
+                                <i class="fa fa-database" style="color: #fdfdfd;"></i>
+                            </div>
                             <div class="ribbon ribbon-color-primary uppercase">Oracle</div>
                             <p class="ribbon-content">Oracle数据库</p>
                             <div style="text-align:center;">
@@ -70,7 +79,11 @@ $this->params['title_sub'] = '导入自己的数据';
                         </div>
                     </div>
                     <div class="col-lg-2 col-md-4 col-xs-12">
-                        <div class="mt-element-ribbon bg-grey-steel">
+                        <div class="mt-element-ribbon bg-grey-steel" style="background-color: #3598dc !important;">
+                            <div class="visual" style="width: 80px;
+    height: 80px;display: block;font-size: 75px;position: absolute;top: 28px;right: 38px;opacity: 0.3;line-height: 75px;">
+                                <i class="fa fa-database" style="color: #fdfdfd;"></i>
+                            </div>
                             <div class="ribbon ribbon-color-primary uppercase">SQLServer</div>
                             <p class="ribbon-content">SQLServer数据库</p>
                             <div style="text-align:center;">
@@ -82,9 +95,13 @@ $this->params['title_sub'] = '导入自己的数据';
                         </div>
                     </div>
                     <div class="col-lg-2 col-md-4 col-xs-12">
-                        <div class="mt-element-ribbon bg-grey-steel">
+                        <div class="mt-element-ribbon bg-grey-steel" style="background-color: #3598dc !important;">
+                            <div class="visual" style="width: 80px;
+    height: 80px;display: block;font-size: 75px;position: absolute;top: 28px;right: 38px;opacity: 0.3;line-height: 75px;">
+                                <i class="fa fa-database" style="color: #fdfdfd;"></i>
+                            </div>
                             <div class="ribbon ribbon-color-primary uppercase">Hive</div>
-                            <p class="ribbon-content">Hive数据库</p>
+                            <p class="ribbon-content"> Hive数据库</p>
                             <div style="text-align:center;">
                                 <a href="javascript:;" class="btn btn-sm red btn-db-import" data-type="db"> 导入
                                     <i class="fa fa-user"></i>
@@ -94,7 +111,11 @@ $this->params['title_sub'] = '导入自己的数据';
                         </div>
                     </div>
                     <div class="col-lg-2 col-md-4 col-xs-12">
-                        <div class="mt-element-ribbon bg-grey-steel">
+                        <div class="mt-element-ribbon bg-grey-steel" style="background-color: #3598dc !important;">
+                            <div class="visual" style="width: 80px;
+    height: 80px;display: block;font-size: 75px;position: absolute;top: 28px;right: 38px;opacity: 0.3;line-height: 75px;">
+                                <i class="fa fa-database" style="color: #fdfdfd;"></i>
+                            </div>
                             <div class="ribbon ribbon-color-primary uppercase">PostgreSQL</div>
                             <p class="ribbon-content">PostgreSQL数据库</p>
                             <div style="text-align:center;">
@@ -106,7 +127,11 @@ $this->params['title_sub'] = '导入自己的数据';
                         </div>
                     </div>
                     <div class="col-lg-2 col-md-4 col-xs-12">
-                        <div class="mt-element-ribbon bg-grey-steel">
+                        <div class="mt-element-ribbon bg-grey-steel" style="background-color: #3598dc !important;">
+                            <div class="visual" style="width: 80px;
+    height: 80px;display: block;font-size: 75px;position: absolute;top: 28px;right: 38px;opacity: 0.3;line-height: 75px;">
+                                <i class="fa fa-database" style="color: #fdfdfd;"></i>
+                            </div>
                             <div class="ribbon ribbon-color-primary uppercase">MongoDB</div>
                             <p class="ribbon-content">MongoDB数据库</p>
                             <div style="text-align:center;">
@@ -123,9 +148,9 @@ $this->params['title_sub'] = '导入自己的数据';
             <div class="tab-pane" id="tab_5_2">
                 <div class="row">
                     <div class="col-lg-2 col-md-4 col-xs-12">
-                        <div class="mt-element-ribbon bg-grey-steel">
+                        <div class="mt-element-ribbon bg-grey-steel" style="background-color: #3598dc !important;">
                             <div class="ribbon ribbon-color-primary uppercase">Excel</div>
-                            <p class="ribbon-content">
+                            <p class="ribbon-content" style="padding: 8px;">
                                 <div style="text-align:center;">
 
                                     <form id="form_excel" role="form" data-toggle="validator" method="post" enctype="multipart/form-data">
@@ -138,7 +163,7 @@ $this->params['title_sub'] = '导入自己的数据';
                                                                         <span class="fileinput-exists"> Change </span>
                                                                         <input type="hidden" name="<?= Yii::$app->getRequest()->csrfParam; ?>" value="<?= Yii::$app->getRequest()->getCsrfToken(); ?>">
                                                                         <input type="file" name="excel_file" multiple> </span>
-                                                <span class="fileinput-filename"> </span> &nbsp;
+                                                <span class="fileinput-filename" style="display: block;"> </span> &nbsp;
                                                 <a href="javascript:;" class="close fileinput-exists" data-dismiss="fileinput"> </a>
                                             </div>
 
@@ -158,9 +183,9 @@ $this->params['title_sub'] = '导入自己的数据';
                     </div>
 
                     <div class="col-lg-2 col-md-4 col-xs-12">
-                        <div class="mt-element-ribbon bg-grey-steel">
+                        <div class="mt-element-ribbon bg-grey-steel" style="background-color: #3598dc !important;">
                             <div class="ribbon ribbon-color-primary uppercase">CSV</div>
-                            <p class="ribbon-content">
+                            <p class="ribbon-content" style="padding: 8px;">
                                 <div style="text-align:center;">
                                     <form id="form_csv" role="form" data-toggle="validator" method="post" enctype="multipart/form-data">
 
@@ -172,7 +197,7 @@ $this->params['title_sub'] = '导入自己的数据';
                                                                                 <span class="fileinput-exists"> Change </span>
                                                                                 <input type="hidden" name="<?= Yii::$app->getRequest()->csrfParam; ?>" value="<?= Yii::$app->getRequest()->getCsrfToken(); ?>">
                                                                                 <input type="file" name="csv_file" multiple> </span>
-                                                <span class="fileinput-filename"> </span> &nbsp;
+                                                <span class="fileinput-filename" style="display: block;"> </span> &nbsp;
                                                 <a href="javascript:;" class="close fileinput-exists" data-dismiss="fileinput"> </a>
                                             </div>
 
@@ -190,6 +215,8 @@ $this->params['title_sub'] = '导入自己的数据';
                     </div>
                 </div>
             </div>
+
+
             <div class="tab-pane" id="tab_5_3">
                 <p> 数据统计 </p>
             </div>

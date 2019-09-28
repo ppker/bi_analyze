@@ -1697,7 +1697,7 @@
         "scrollY": true,
         ScrollCollapse: true,
         autoWidth: false,
-        buttons: [
+        /*buttons: [
             { extend: 'excel', className: 'btn yellow btn-outline ',
                 exportOptions: {
                     trim: false
@@ -1706,9 +1706,9 @@
             { extend: 'csv', className: 'btn purple btn-outline ' },
             { extend: 'pdf', className: 'btn green btn-outline' },
             { extend: 'colvis', className: 'btn dark btn-outline', text: 'Columns'},
-			/*{ extend: 'print', className: 'btn dark btn-outline' },
-			 { extend: 'copy', className: 'btn red btn-outline' },*/
-        ],
+			/!*{ extend: 'print', className: 'btn dark btn-outline' },
+			 { extend: 'copy', className: 'btn red btn-outline' },*!/
+        ],*/
         // 渲染头部
         "headerCallback": function( thead, data, start, end, display ) {
             $(thead).css({"background-color": "#00aecd"});

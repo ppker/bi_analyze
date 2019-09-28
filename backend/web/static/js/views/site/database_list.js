@@ -1,8 +1,8 @@
 /*
 * @Author: yata
 * @Date:   2019-08-27 21:31:37
-* @Last Modified by:   yata
-* @Last Modified time: 2019-09-10 22:33:11
+* @Last Modified by:   yanzhipeng
+* @Last Modified time: 2019-09-25 11:55:38
 */
 
 window.PAGE_ACTION = function() {
@@ -33,7 +33,7 @@ window.PAGE_ACTION = function() {
                         var t = table.DataTable({
                             // dom: '<"html5buttons"B>lTfgitp',
 
-                            "order": [[ 0, "asc" ]],
+                            "order": [[ 3, "asc" ]],
                             oLanguage: ZP.define.dataTableLan,
                             bStateSave: ZP.define.dataTableStateSave,
                             // "stripeClasses": [ 'strip1', 'strip2'],
@@ -48,7 +48,7 @@ window.PAGE_ACTION = function() {
                         btn_del();
                         btn_edit();
                         btn_submit();
-                        show_tables();
+                        show_tables(t);
                     });
 
 
@@ -73,10 +73,98 @@ window.PAGE_ACTION = function() {
         });
     };
 
-    show_tables = function() {
+    show_tables = function(t) {
         $("table tr .btn-group").on("click", "button[actionrule='look_to']", function(e) {
             var $id = $(this).data("dbid");
-            ZP.utils.dumpUrl('/admin/site/database_profile?dbid=' + $id);
+            var $source_type = $(this).data("source");
+            var $table_name = $(this).data("table");
+            var $dbname = $(this).data("dbname");
+
+            // 展示数据库有哪些表, 重新构造 dataTables
+            ZP.api.get_tables_by_db({
+                data: {id: $id, source_type: $source_type, table_name: $table_name, dbname: $dbname},
+                successCallBack: function(result){
+                    if(ZP.utils.isObject(result.data) || ZP.utils.isArray(result.data)){
+                        t.clear().destroy(); // destroy dataTable for reiniDataTables 重构dataTables
+                        $("#table thead").remove();
+                        // return;
+                        var $template_headerbas = "common/show.html";
+                        if ('file' == $source_type) $template_headerbas = "common/show_data.html";
+                        ZP.utils.render($template_headerbas, {
+                            // list: {"head": ["azhu1", "azhu2"], "limit": [["yanzhipeng1", "yanzhipeng2"], ["yanzhipeng1", "yanzhipeng2"]]}
+                            list: result.data
+                        },function(html){
+                            var table = $("#table");
+                            table.html(html);
+                            var t = table.DataTable({
+                                // dom: '<"html5buttons"B>lTfgitp',
+
+                                "order": [[ 0, "asc" ]],
+                                oLanguage: ZP.define.dataTableLan,
+                                bStateSave: ZP.define.dataTableStateSave,
+                                // "stripeClasses": [ 'strip1', 'strip2'],
+                                "ordering": true,
+                                // dom: 'Tfgtpi',
+                                scrollX: false,
+                                ScrollCollapse: true,
+                                responsive: true,
+                                "lengthMenu": [15, 30, 100],
+                                destroy: true
+                            });
+
+                            // 按钮的改变
+                            $("#btn_add").remove();
+                            $("div.actions div.btn-group-devided").append("<button type='button' class='btn btn-primary' onclick='ZP.utils.reload();'>返回</button>");
+
+
+                            // 此处继续进行 dataTables重构
+                            $("table tr .btn-group").on("click", "button[actionrule='look_table']", function(e) {
+                                var $table_name = $(this).data("table");
+                                ZP.api.get_data_by_table({
+                                    data: {db_id: $id, table_name: $table_name},
+                                    successCallBack: function(result){
+                                        if(ZP.utils.isObject(result.data) || ZP.utils.isArray(result.data)){
+                                            t.clear().destroy(); // destroy dataTable for reiniDataTables 重构dataTables
+                                            $("#table thead").remove();
+                                            ZP.utils.render("common/show_data.html", {
+                                                // list: {"head": ["azhu1", "azhu2"], "limit": [["yanzhipeng1", "yanzhipeng2"], ["yanzhipeng1", "yanzhipeng2"]]}
+                                                list: result.data
+                                            }, function(html){
+                                                var table = $("#table");
+                                                table.html(html);
+                                                var t = table.DataTable({
+                                                    // dom: '<"html5buttons"B>lTfgitp',
+
+                                                    "order": [[ 0, "asc" ]],
+                                                    oLanguage: ZP.define.dataTableLan,
+                                                    bStateSave: ZP.define.dataTableStateSave,
+                                                    // "stripeClasses": [ 'strip1', 'strip2'],
+                                                    "ordering": true,
+                                                    // dom: 'Tfgtpi',
+                                                    scrollX: false,
+                                                    ScrollCollapse: true,
+                                                    responsive: true,
+                                                    "lengthMenu": [15, 30, 100],
+                                                    destroy: true
+                                                });
+
+                                                // 按钮的改变
+                                                $("#btn_add").remove();
+                                                $("div.actions div.btn-group-devided").append("<button id='btn_add' type='button' class='btn btn-primary' onclick='ZP.utils.reload();'>返回</button>");
+
+                                            });
+
+                                        }
+                                    }
+                                });
+
+                            });
+
+                    });
+                }
+                failCallBack: ZP.utils.failCallBack
+            }});
+
             e.preventDefault();
         })
     };

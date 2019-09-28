@@ -50,6 +50,30 @@ window.PAGE_ACTION = function() {
             });
             e.preventDefault();
         });
+
+        // csv
+
+        var $form1 = null;
+        $form1 = $("form#form_csv");
+        $form1.submit(function(e) {
+
+            var data1 = new FormData($form1[0]);
+            ZP.api.user_database_upload({
+                data: data1,
+                type: 'POST',
+                cache: false,
+                processData: false,
+                contentType: false,
+                dataType: "json",
+                successCallBack: function(result){
+                    ZP.utils.alert_warning(result.message, true);
+                },
+                failCallBack: ZP.utils.failCallBack
+            });
+            e.preventDefault();
+        });
+
+
     }
 
 

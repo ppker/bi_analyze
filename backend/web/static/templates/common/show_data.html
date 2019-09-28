@@ -1,0 +1,33 @@
+<thead>
+<tr role="row">
+
+    {{#each list.head}}
+    <th>{{this}}</th>
+    {{/each}}
+    <th>操作</th>
+</tr>
+</thead>
+<tbody>
+{{#each list.limit}}
+<tr id="{{@index}}">
+
+    {{#each this}}
+    <td>{{this}}</td>
+    {{/each}}
+    <td>
+
+        <div class="btn-group">
+
+            <button class="btn red dropdown-toggle" data-toggle="dropdown">操作
+                <i class="fa fa-angle-down"></i>
+            </button>
+            <ul class="dropdown-menu" style="min-width: 80px; margin-left: 50%;">
+                <li>
+                    <a href="javascript:;" actionrule="none" actionid="{{id}}" class="btn btn-sm green"> <i class="fa fa-warning"></i>&nbsp;<span>暂无操作</span> </a>
+                </li>
+            </ul>
+        </div>
+    </td>
+</tr>
+{{/each}}
+</tbody>

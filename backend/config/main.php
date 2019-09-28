@@ -45,7 +45,8 @@ return [
             'showScriptName' => false,
             'rules' => [
                 '<controller:\w+>/<action:\w+>' => '<controller>/<action>',
-                'site/database/list' => 'site/database_list'
+                'site/database/list' => 'site/database_list',
+                'site/database_profile/<id:\d+>' => 'site/database_profile',
                 // 'database/show/<menu_id:\d+>' => 'database/show',
             ],
         ],

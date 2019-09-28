@@ -134,6 +134,20 @@
         return ajax(options);
     };
 
+    // get_tables_by_db
+    self.get_tables_by_db = function(options) {
+        options = options ? options : {};
+        options.url = "/api/web/user/database_tables";
+        return ajax(options);
+    };
+
+    // get_data_by_table
+    self.get_data_by_table = function(options) {
+        options = options ? options : {};
+        options.url = "/api/web/user/data_tables";
+        return ajax(options);
+    };
+
 
 
 

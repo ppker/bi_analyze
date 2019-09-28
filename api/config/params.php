@@ -12,6 +12,8 @@ return [
         'POST database_del' => 'database_del',
         'GET,POST database_upload' => 'database_upload',
         'GET,POST database_profile' => 'database_profile',
+        'GET,POST database_tables' => 'database_tables',
+        'GET,POST data_tables' => 'data_tables',
 
 
 

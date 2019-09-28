@@ -2,6 +2,7 @@ window.PAGE_ACTION = function() {
     "use strict";
 
     var init_limit = null, // 默认条件页面
+        btn_del = null,
         mark_end = null;
 
     btn_del = function() { // 单个删除按钮
@@ -21,14 +22,11 @@ window.PAGE_ACTION = function() {
     };
 
     init_limit = function() {
+        console.log('dfdfdfd');
         ZP.utils.default_list({
             'api_url': 'database_profile', // list的api
             'template_path': 'site/database_profile.html',
             'dataTable': $.extend(true, {}, ZP.utils.default_dataTable_list, {}),
-            'all_del_api': 'system_menu_del',
-            'add_api': 'system_menu_add',
-            'init_form_api': {'api': 'init_form_api', 'id': 'pid_id'}, // 需要对表单进行数据初始化操作
-            'btn_edit': btn_edit,
             'btn_del': btn_del,
         });
     };
