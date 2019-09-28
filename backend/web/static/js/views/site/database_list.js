@@ -114,7 +114,7 @@ window.PAGE_ACTION = function() {
 
                             // 按钮的改变
                             $("#btn_add").remove();
-                            $("div.actions div.btn-group-devided").append("<button type='button' class='btn btn-primary' onclick='ZP.utils.reload();'>返回</button>");
+                            $("div.actions div.btn-group-devided").append("<button id='btn_add' type='button' class='btn btn-primary' onclick='ZP.utils.reload();'>返回</button>");
 
 
                             // 此处继续进行 dataTables重构
